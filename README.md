@@ -5,7 +5,7 @@ Briefly the project uses the Unity (MS Visual Studios) pre-defined environment (
 
 Observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocityies of the arm. Each action is a vector of 4 numbers, corresponding to torque applied to two joints. Every entry to the action vector should be a number between -1 and 1.
 
-The further details of this project is contained in this directory in the readme1st.md file, which was the Udacity original readme file for this project, which I renamed to avoid conflict/confusion. 
+The further details of this project is contained in this directory in the MoreProjectDetails.md file, which was the Udacity original readme file for this project, which I renamed to avoid conflict/confusion. 
 
 # Project environment details 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
@@ -75,12 +75,6 @@ We were also interested in including the following based on the papers we read b
 The DDPG allows learning to occur with a fixed set of weights and then updating the weights in the other sets, and then once the training is done, it then updates the fixed weights NN and starts again. This tends to avoid overtuning/overfitting.
 
 
-## PRELIMINARY NOTES:
-The provided random actions section of code that was originally provided we commented out (just to show it present as the original), and instead began substitution of the necessary packages and tools in the provided jupyter notebook.
-
-We started with just importing the model and agent from DDPG as before. Locally we've renamed the python files ddpg_model.py and ddpg_agent.py. 
-
-
 ## APPROACH
 --> UPDATE: We started with the default (intial) values for the previous DDPG. 
 
@@ -106,11 +100,9 @@ This resulted in no apparent gain in performance with average score less than 1.
 ### Agent: the final agent solution used in the DDPG mini project decreased the LR_CRITIC by a factor of 10 
 Buffer size: 100,000
 BATCH_SIZE = 128        # minibatch size
-#BATCH_SIZE = 64         # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR_ACTOR = 1e-4         # learning rate of the actor 
-#LR_CRITIC = 1e-3        # learning rate of the critic
 LR_CRITIC = 1e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 batch size: 64
